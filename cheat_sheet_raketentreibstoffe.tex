@@ -92,12 +92,10 @@ Ideal gas constant $R_m = 8.314 \frac{\text{kg }\text{m}^2}{\text{s }\text{mol }
 \section{Chemical Equations}
 Massfraction $\mu_i = \frac{m_i}{m}$\\
 Molefraction $\nu_i = \frac{n_i}{n}$\\
-\vspace{7pt}
 Molemass $M_i = \frac{m_i}{n_i}$\\
 Average mole mass $\bar{M} = \frac{m}{n} = \sum M_i \cdot \nu_i$\\
-\vspace{7pt}
 Mole to Mass fraction $\mu_i = \frac{M_i}{\bar{M}} \nu_i$\\
-\vspace{7pt}
+\vspace{3pt}
 Oxygen balance $W_{ox} = -1600 (2x+y/2-z)/M$ with $C_xH_yO_z$\\
 \section{Assumptions of NASA CEA}
 Adiabatic combustion chamber.\\
@@ -111,18 +109,7 @@ The \textbf{frozen} option of CEA will freeze all reaction products after the fr
 Sphere volume $V = \frac{4}{3}\pi R^3$\\
 Sphere surface $A = 4\pi R^2$\\
 
-\section{Liquid}
-\begin{itemize}
-	\item \textbf{Good}: High specific impulses, reignitable, variable mass flow
-	\item \textbf{Bad}: Movement of fuel in tanks, leakage, complex turbo pumps, big temperature range, zero-g fuel supply 
-\end{itemize}
-
-\section{Solid}
-\begin{itemize}
-	\item \textbf{Good}: High thrust density, storable, low structure mass, no pumps, cheap
-	\item \textbf{Bad}: Short burn times, no reignition, moderate specific impulses, sensible to impacts, not throttable 
-\end{itemize}
-\subsection{Calculating solid rocket fuels}
+\section{Calculating solid rocket fuels}
 \begin{tabular}{lll}
 	Pressure Exponent & $n$ & - \\
 	Fuel Surface & $A_b$ & $\text{m}^2$ \\
@@ -151,27 +138,41 @@ Spec. Impulse $I_{sp} = \frac{1}{g} \left[ \sqrt{\frac{2\kappa}{\kappa-1}\frac{R
 Effective Thrust $F_{\text{eff}}=\int_{t_A}^{t_D}F\cdot dt / \Delta t_{AD}$\\
 \vspace{5pt}
 
-\section{Gel}
-Gel propellants are mixtures containing at least two phases. A base fluid and a gelator to solidify the base fluid.
+\section{Solid}
 \begin{itemize}
-	\item \textbf{Good}: easy to store like solids, can handle metal additives without sedimentation, in use similar to liquid propellants due to scherverdünnenden Verhalten
-	\item \textbf{Bad}: lower density and thrustdensity, lower specific impulses, higher operating pressures to transport the gel are necessary
+	\item \textbf{Good}: High thrust density, storable, low structure mass, no pumps, cheap
+	\item \textbf{Bad}: Short burn times, no reignition, moderate specific impulses, sensible to impacts, not throttable 
 \end{itemize}
 
+\section{Liquid}
+\begin{itemize}
+	\item \textbf{Good}: High specific impulses, reignitable, variable mass flow
+	\item \textbf{Bad}: Movement of fuel in tanks, leakage, complex turbo pumps, big temperature range, zero-g fuel supply 
+\end{itemize}
+
+\section{Gel}
+Gel propellants are mixtures containing at least two phases. A base fluid and a gelator to solidify the base fluid.
+\vspace{7pt}
+\begin{itemize}
+	\item \textbf{Good}: easy to store like solids, can handle metal additives without sedimentation, in use similar to liquid propellants due to shear-thinning behaviour
+	\item \textbf{Bad}: lower density and thrustdensity, lower specific impulses, higher operating pressures to transport the gel are necessary
+\end{itemize}
+\vspace{7pt}
 
 \section{Hybrid}
 Hybrid propellants are diffusion limited, which means that the regression rate is not pressure dependent.
+\vspace{7pt}
 \begin{itemize}
 	\item \textbf{Good}: Inherently safe because no oxidizer contained in the fuel, can be throttled and reignited
 	\item \textbf{Bad}: low regression rates, oxidizer-fuel shift in some fuels during operation, not much experience
 \end{itemize}
+\vspace{7pt}
 It has been shown that Paraffin cores have a higher regression rate (3-5 times) than the classical HTPB cores.
-
 
 \section{Green Propellants}
 \begin{itemize}
-	\item \textbf{Good}: less/non toxic, reduced enviromental impact, possibly cheaper due to easier handling, in theory higher perfomance than conventional
-	\item \textbf{Bad}: little experience -> more research and testing essential
+	\item \textbf{Good}: Lower toxicity, less environmental hazards, lower costs
+	\item \textbf{Bad}: medium specific impulses, not much experience
 \end{itemize}
 
 \section{Editorial}

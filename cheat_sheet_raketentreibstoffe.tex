@@ -108,11 +108,14 @@ The \textbf{frozen} option of CEA will freeze all reaction products after the fr
 \section{Geometrics}
 Sphere volume $V = \frac{4}{3}\pi R^3$\\
 Sphere surface $A = 4\pi R^2$\\
+\vspace{1pt}
+Cylinder Side $A = 2\pi R\cdot h$
 
-\section{Calculating solid rocket fuels}
+\section{Calculating solid/hybrid rocket fuels}
 \begin{tabular}{lll}
 	Pressure Exponent & $n$ & - \\
 	Fuel Surface & $A_b$ & $\text{m}^2$ \\
+	Port Area & $A_p$ & $\text{m}^2$ \\
 	Fuel Density & $\rho_b$ & $\frac{\text{kg}}{\text{m}^3}$ \\
 	Temperature Sensitivity Factor & $\Pi_{\dot{r}}$ & - \\
 	Constants & $a_{ref}, T_{ref}$ & - \\
@@ -123,18 +126,20 @@ Regressionrate $\dot{r}=a\cdot p_{c,0}^n = \frac{\dot{m}}{A_b\rho_b}$\\
 with $a = a_{ref}\cdot e^{\Pi_{\dot{r}} (T-T_{ref})}$\\
 Temp. Sensitivity $\Pi_{\dot{r}} = \frac{1}{\dot{r}} (\frac{d \dot{r}}{d T})_p$ \\
 \vspace{5pt}
+Regressionrate hybrid $\dot{r}=a\cdot G_{ox}^n = a\cdot (\frac{\dot{m}_{ox}}{A_p})^n$\\
 If the pressure exponent $n$ is greater 1, the combustion chamber is sensible to pressure disturbances and can become in-stable. This leads to a destruction of the motor.\\
-\vspace{12pt}
+\vspace{7pt}
 Combustion pressure $p_c = (c^* \rho_b a \frac{A_b}{A_t})^\frac{1}{1-n}$\\
 with $ K = \frac{A_b}{A_t}$ as "clamping".\\
-\vspace{7pt}
+\vspace{5pt}
 Charact. Speed $c^* = \frac{\sqrt{\frac{R_m}{\bar{M}}T_c}}{\Gamma}$\\
+\vspace{5pt}
 Gamma Function $\Gamma = \sqrt{\kappa \cdot (\frac{2}{\kappa+1})^{\frac{\kappa+1}{\kappa-1}}}$\\
-\vspace{7pt}
+\vspace{5pt}
 Expansion Ratio $\epsilon = \frac{A_e}{A_t} = \Gamma \sqrt{\frac{\kappa-1}{2 \kappa}} \frac{(\frac{p_e}{p_c})^{-\frac{1}{\kappa}}}{\sqrt{1-(\frac{p_e}{p_c})^\frac{\kappa-1}{\kappa}}}$\\
-\vspace{7pt}
+\vspace{5pt}
 Spec. Impulse $I_{sp} = \frac{1}{g} \left[ \sqrt{\frac{2\kappa}{\kappa-1}\frac{R_m}{\bar{M}} T_c \left[1-(\frac{p_e}{p_c})^\frac{\kappa-1}{\kappa}\right]} + \frac{(p_e-p_a) A_e}{\dot{m}}\right]$\\
-\vspace{12pt}
+\vspace{5pt}
 Effective Thrust $F_{\text{eff}}=\int_{t_A}^{t_D}F\cdot dt / \Delta t_{AD}$\\
 \vspace{5pt}
 

@@ -8,25 +8,25 @@
 
 
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
-	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}A
-		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-	}
+{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}A
+	{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+}
 \pagestyle{empty}
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%x
-                                {\normalfont\large\bfseries}}
+	{-1ex plus -.5ex minus -.2ex}%
+	{0.5ex plus .2ex}%x
+	{\normalfont\large\bfseries}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-                                {-1explus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%
-                                {\normalfont\normalsize\bfseries}}
+	{-1explus -.5ex minus -.2ex}%
+	{0.5ex plus .2ex}%
+	{\normalfont\normalsize\bfseries}}
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
-                                {-1ex plus -.5ex minus -.2ex}%
-                                {1ex plus .2ex}%
-                                {\normalfont\small\bfseries}}
+	{-1ex plus -.5ex minus -.2ex}%
+	{1ex plus .2ex}%
+	{\normalfont\small\bfseries}}
 \makeatother
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
@@ -36,155 +36,156 @@
 \title{Raketentreibstoffe I+II - Cheat Sheet}
 
 \begin{document}
-
-\raggedright
-\footnotesize
-
-\begin{center}
-     \Large{\textbf{Raketentreibstoffe I+II - Cheat Sheet}} \\
-\end{center}
-\begin{multicols}{3}
-\setlength{\premulticols}{1pt}
-\setlength{\postmulticols}{1pt}
-\setlength{\multicolsep}{1pt}
-\setlength{\columnsep}{2pt}
-
-\section{Basics}
-Most chemical equations are not valid at high temperatures because of dissociation effects. More dissociation will result in a less released heat during the reaction since energy is needed to break the molecules apart. In general, the following statements are valid during combustion reactions.\\
-\vspace{5pt}
-\textbf{Higher} pressures lead to \textbf{less} dissociation.\\
-\textbf{Higher} temperatures lead to \textbf{more} dissociation.\\
-\vspace{7pt}
-\begin{tabular}{lll}
-	Thrust & $F$ & N \\
-	Chamber pressure & $p_c$ & Pa \\
-	Nozzle exit pressure & $p_e$ & Pa \\
-	Ambient pressure & $p_0$ & Pa \\
-	Oxidizer fuel ratio & ROF & - \\
-	Initial mass & $m_0$ & kg \\
-	Burnout mass & $m_b$ & kg \\
-\end{tabular}\\
-\vspace{5pt}
-Ziolkowski equation $\Delta v=I_{\text{sp}}\cdot g_0 \cdot \text{ln}(\frac{m_0}{m_b})$\\
-\vspace{7pt}
-Total impulse $I_T = \int_{0}^{t_e} F dt$\\
-Specific vacuum impulse $I_{\text{sp}}=\frac{F}{\dot{m}g}$\\
-\vspace{7pt}
-Thrust equation $F=\dot{m}\cdot c_e + A_e \cdot (p_e - p_0)$\\
-Thrust coefficient $c_F = \frac{F}{A_t p_c}$\\
-\vspace{7pt}
-Characteristic length $L^*=V_c/A_t$\\
-Characteristic speed $c^*=\frac{p_cA_t}{\dot{m}}$\\
-Characteristic speed  $c^*=\frac{\sqrt{\kappa R T_c}}{\kappa \sqrt{(\frac{2}{\kappa+1})^\frac{\kappa+1}{\kappa-1}}}$\\
-Efficiency of combustion $\eta_{c^*} = \frac{c^*_{\text{real}}}{c^*}$
-
-\section{Thermodynamics}
-\begin{tabular}{lll}
-	Degrees of Molecular Freedom & $f$ & - \\
-\end{tabular}\\
-\vspace{5pt}
-Ideal gas equation $pV = mRT$\\
-\vspace{5pt}
-Isentropic Coefficient $\kappa = \frac{f+2}{f}$\\
-Isentropic (adiabatic) expansion $\frac{T_1}{T_0} = (\frac{p_1}{p_0})^\frac{\kappa-1}{\kappa}$\\
-Ideal gas constant $R_m = 8.314 \frac{\text{kg }\text{m}^2}{\text{s }\text{mol }\text{K}}=R\cdot M$\\
-\section{Chemical Equations}
-Massfraction $\mu_i = \frac{m_i}{m}$\\
-Molefraction $\nu_i = \frac{n_i}{n}$\\
-Molemass $M_i = \frac{m_i}{n_i}$\\
-Average mole mass $\bar{M} = \frac{m}{n} = \sum M_i \cdot \nu_i$\\
-Mole to Mass fraction $\mu_i = \frac{M_i}{\bar{M}} \nu_i$\\
-\vspace{3pt}
-Oxygen balance $W_{ox} = -1600 (2x+y/2-z)/M$ with $C_xH_yO_z$\\
-\section{Assumptions of NASA CEA}
-Adiabatic combustion chamber.\\
-Isentropic Expansion.\\
-Homogenous mixing.\\
-Thermochemical Equilibrium.\\
-\vspace{5pt}
-The \textbf{frozen} option of CEA will freeze all reaction products after the freezing point, allowing no further reactions in the mixture.
-
-\section{Geometrics}
-Sphere volume $V = \frac{4}{3}\pi R^3$\\
-Sphere surface $A = 4\pi R^2$\\
-\vspace{1pt}
-Cylinder Side $A = 2\pi R\cdot h$
-
-\section{Calculating solid/hybrid rocket fuels}
-\begin{tabular}{lll}
-	Pressure Exponent & $n$ & - \\
-	Fuel Surface & $A_b$ & $\text{m}^2$ \\
-	Port Area & $A_p$ & $\text{m}^2$ \\
-	Fuel Density & $\rho_b$ & $\frac{\text{kg}}{\text{m}^3}$ \\
-	Temperature Sensitivity Factor & $\Pi_{\dot{r}}$ & - \\
-	Constants & $a_{ref}, T_{ref}$ & - \\
-	Effective Burn Duration & $\Delta t_{AD}$ & s \\
-\end{tabular}\\
-\vspace{7pt}
-Regressionrate $\dot{r}=a\cdot p_{c,0}^n = \frac{\dot{m}}{A_b\rho_b}$\\
-with $a = a_{ref}\cdot e^{\Pi_{\dot{r}} (T-T_{ref})}$\\
-Temp. Sensitivity $\Pi_{\dot{r}} = \frac{1}{\dot{r}} (\frac{d \dot{r}}{d T})_p$ \\
-\vspace{5pt}
-Regressionrate hybrid $\dot{r}=\frac{dR}{dt}=a\cdot G_{ox}^n = a\cdot (\frac{\dot{m}_{ox}}{A_p})^n$\\
-\vspace{5pt}
-If the pressure exponent $n$ is greater 1, the combustion chamber is sensible to pressure disturbances and can become in-stable. This leads to a destruction of the motor.\\
-\vspace{7pt}
-Combustion pressure $p_c = (c^* \rho_b a \frac{A_b}{A_t})^\frac{1}{1-n}$\\
-with $ K = \frac{A_b}{A_t}$ as "clamping".\\
-\vspace{5pt}
-Charact. Speed $c^* = \frac{\sqrt{\frac{R_m}{\bar{M}}T_c}}{\Gamma}$\\
-\vspace{5pt}
-Gamma Function $\Gamma = \sqrt{\kappa \cdot (\frac{2}{\kappa+1})^{\frac{\kappa+1}{\kappa-1}}}$\\
-\vspace{5pt}
-Expansion Ratio $\epsilon = \frac{A_e}{A_t} = \Gamma \sqrt{\frac{\kappa-1}{2 \kappa}} \frac{(\frac{p_e}{p_c})^{-\frac{1}{\kappa}}}{\sqrt{1-(\frac{p_e}{p_c})^\frac{\kappa-1}{\kappa}}}$\\
-\vspace{5pt}
-Spec. Impulse $I_{sp} = \frac{1}{g} \left[ \sqrt{\frac{2\kappa}{\kappa-1}\frac{R_m}{\bar{M}} T_c \left[1-(\frac{p_e}{p_c})^\frac{\kappa-1}{\kappa}\right]} + \frac{(p_e-p_a) A_e}{\dot{m}}\right]$\\
-\vspace{5pt}
-Effective Thrust $F_{\text{eff}}=\int_{t_A}^{t_D}F\cdot dt / \Delta t_{AD}$\\
-\vspace{5pt}
-
-\section{Solid}
-\begin{itemize}
-	\item \textbf{Good}: High thrust density, storable, low structure mass, no pumps, cheap
-	\item \textbf{Bad}: Short burn times, no reignition, moderate specific impulses, sensible to impacts, not throttable 
-\end{itemize}
-
-\section{Liquid}
-\begin{itemize}
-	\item \textbf{Good}: High specific impulses, reignitable, variable mass flow
-	\item \textbf{Bad}: Movement of fuel in tanks, leakage, complex turbo pumps, big temperature range, zero-g fuel supply 
-\end{itemize}
-
-\section{Gel}
-Gel propellants are mixtures containing at least two phases. A base fluid and a gelator to solidify the base fluid.
-\vspace{7pt}
-\begin{itemize}
-	\item \textbf{Good}: easy to store like solids, can handle metal additives without sedimentation, in use similar to liquid propellants due to shear-thinning behaviour
-	\item \textbf{Bad}: lower density and thrustdensity, lower specific impulses, higher operating pressures to transport the gel are necessary
-\end{itemize}
-\vspace{7pt}
-
-\section{Hybrid}
-Hybrid propellants are diffusion limited, which means that the regression rate is not pressure dependent.
-\vspace{7pt}
-\begin{itemize}
-	\item \textbf{Good}: Inherently safe because no oxidizer contained in the fuel, can be throttled and reignited
-	\item \textbf{Bad}: low regression rates, oxidizer-fuel shift in some fuels during operation, not much experience
-\end{itemize}
-\vspace{7pt}
-It has been shown that Paraffin cores have a higher regression rate (3-5 times) than the classical HTPB cores.
-
-\section{Green Propellants}
-\begin{itemize}
-	\item \textbf{Good}: Lower toxicity, less environmental hazards, lower costs
-	\item \textbf{Bad}: medium specific impulses, not much experience
-\end{itemize}
-
-\section{Editorial}
-Created by Christian Molli\`ere.\\
-Last updated \today.\\
-Feel free to share and edit!
-
-
-\end{multicols}
+	
+	\raggedright
+	\footnotesize
+	
+	\begin{center}
+		\Large{\textbf{Raketentreibstoffe I+II - Cheat Sheet}} \\
+	\end{center}
+	\begin{multicols}{3}
+		\setlength{\premulticols}{1pt}
+		\setlength{\postmulticols}{1pt}
+		\setlength{\multicolsep}{1pt}
+		\setlength{\columnsep}{2pt}
+		
+		\section{Basics}
+		Most chemical equations are not valid at high temperatures because of dissociation effects. More dissociation will result in a less released heat during the reaction since energy is needed to break the molecules apart. In general, the following statements are valid during combustion reactions.\\
+		\vspace{5pt}
+		\textbf{Higher} pressures lead to \textbf{less} dissociation.\\
+		\textbf{Higher} temperatures lead to \textbf{more} dissociation.\\
+		\vspace{7pt}
+		\begin{tabular}{lll}
+			Thrust & $F$ & N \\
+			Chamber pressure & $p_c$ & Pa \\
+			Nozzle exit pressure & $p_e$ & Pa \\
+			Ambient pressure & $p_0$ & Pa \\
+			Oxidizer fuel ratio & ROF & - \\
+			Initial mass & $m_0$ & kg \\
+			Burnout mass & $m_b$ & kg \\
+		\end{tabular}\\
+		\vspace{5pt}
+		Ziolkowski equation $\Delta v=I_{\text{sp}}\cdot g_0 \cdot \text{ln}(\frac{m_0}{m_b})$\\
+		\vspace{7pt}
+		Total impulse $I_T = \int_{0}^{t_e} F dt$\\
+		Specific vacuum impulse $I_{\text{sp}}=\frac{F}{\dot{m}g}$\\
+		\vspace{7pt}
+		Thrust equation $F=\dot{m}\cdot c_e + A_e \cdot (p_e - p_0)$\\
+		Thrust coefficient $c_F = \frac{F}{A_t p_c}$\\
+		\vspace{7pt}
+		Characteristic length $L^*=V_c/A_t$\\
+		Characteristic speed $c^*=\frac{p_cA_t}{\dot{m}}$\\
+		Efficiency of combustion $\eta_{c^*} = \frac{c^*_{\text{real}}}{c^*}$\\
+		\vspace{7pt}
+		Tank stress $S = \frac{p \cdot r}{2 \cdot t}$
+		
+		\section{Thermodynamics}
+		\begin{tabular}{lll}
+			Degrees of Molecular Freedom & $f$ & - \\
+		\end{tabular}\\
+		\vspace{5pt}
+		Ideal gas equation $pV = mRT$\\
+		\vspace{5pt}
+		Isentropic Coefficient $\kappa = \frac{f+2}{f}$\\
+		Isentropic (adiabatic) expansion $\frac{T_1}{T_0} = (\frac{p_1}{p_0})^\frac{\kappa-1}{\kappa}$\\
+		Ideal gas constant $R_m = 8.314 \frac{\text{kg }\text{m}^2}{\text{s }\text{mol }\text{K}}=R\cdot M$\\
+		\section{Chemical Equations}
+		Massfraction $\mu_i = \frac{m_i}{m}$\\
+		Molefraction $\nu_i = \frac{n_i}{n}$\\
+		Molemass $M_i = \frac{m_i}{n_i}$\\
+		Average mole mass $\bar{M} = \frac{m}{n} = \sum M_i \cdot \nu_i$\\
+		Mole to Mass fraction $\mu_i = \frac{M_i}{\bar{M}} \nu_i$\\
+		\vspace{3pt}
+		Oxygen balance $W_{ox} = -1600 (2x+y/2-z)/M$ with $C_xH_yO_z$\\
+		\section{Assumptions of NASA CEA}
+		Adiabatic combustion chamber.\\
+		Isentropic Expansion.\\
+		Homogenous mixing.\\
+		Thermochemical Equilibrium.\\
+		\vspace{5pt}
+		The \textbf{frozen} option of CEA will freeze all reaction products after the freezing point, allowing no further reactions in the mixture.
+		
+		\section{Geometrics}
+		Sphere volume $V = \frac{4}{3}\pi R^3$\\
+		Sphere surface $A = 4\pi R^2$\\
+		\vspace{1pt}
+		Cylinder Side $A = 2\pi R\cdot h$
+		
+		\section{Calculating solid/hybrid rocket fuels}
+		\begin{tabular}{lll}
+			Pressure Exponent & $n$ & - \\
+			Fuel Surface & $A_b$ & $\text{m}^2$ \\
+			Port Area & $A_p$ & $\text{m}^2$ \\
+			Fuel Density & $\rho_b$ & $\frac{\text{kg}}{\text{m}^3}$ \\
+			Temperature Sensitivity Factor & $\Pi_{\dot{r}}$ & - \\
+			Constants & $a_{ref}, T_{ref}$ & - \\
+			Effective Burn Duration & $\Delta t_{AD}$ & s \\
+		\end{tabular}\\
+		\vspace{7pt}
+		Regressionrate $\dot{r}=a\cdot p_{c,0}^n = \frac{\dot{m}}{A_b\rho_b}$\\
+		with $a = a_{ref}\cdot e^{\Pi_{\dot{r}} (T-T_{ref})}$\\
+		Temp. Sensitivity $\Pi_{\dot{r}} = \frac{1}{\dot{r}} (\frac{d \dot{r}}{d T})_p$ \\
+		\vspace{5pt}
+		Regressionrate hybrid $\dot{r}=\frac{dR}{dt}=a\cdot G_{ox}^n = a\cdot (\frac{\dot{m}_{ox}}{A_p})^n$\\
+		\vspace{5pt}
+		If the pressure exponent $n$ is greater 1, the combustion chamber is sensible to pressure disturbances and can become in-stable. This leads to a destruction of the motor.\\
+		\vspace{7pt}
+		Combustion pressure $p_c = (c^* \rho_b a \frac{A_b}{A_t})^\frac{1}{1-n}$\\
+		with $ K = \frac{A_b}{A_t}$ as "clamping".\\
+		\vspace{5pt}
+		Charact. Speed $c^* = \frac{\sqrt{\frac{R_m}{\bar{M}}T_c}}{\Gamma}$\\
+		\vspace{5pt}
+		Gamma Function $\Gamma = \sqrt{\kappa \cdot (\frac{2}{\kappa+1})^{\frac{\kappa+1}{\kappa-1}}}$\\
+		\vspace{5pt}
+		Expansion Ratio $\epsilon = \frac{A_e}{A_t} = \Gamma \sqrt{\frac{\kappa-1}{2 \kappa}} \frac{(\frac{p_e}{p_c})^{-\frac{1}{\kappa}}}{\sqrt{1-(\frac{p_e}{p_c})^\frac{\kappa-1}{\kappa}}}$\\
+		\vspace{5pt}
+		Spec. Impulse $I_{sp} = \frac{1}{g} \left[ \sqrt{\frac{2\kappa}{\kappa-1}\frac{R_m}{\bar{M}} T_c \left[1-(\frac{p_e}{p_c})^\frac{\kappa-1}{\kappa}\right]} + \frac{(p_e-p_a) A_e}{\dot{m}}\right]$\\
+		\vspace{5pt}
+		Effective Thrust $F_{\text{eff}}=\int_{t_A}^{t_D}F\cdot dt / \Delta t_{AD}$\\
+		\vspace{5pt}
+		
+		\section{Solid}
+		\begin{itemize}
+			\item \textbf{Good}: High thrust density, storable, low structure mass, no pumps, cheap
+			\item \textbf{Bad}: Short burn times, no reignition, moderate specific impulses, sensible to impacts, not throttable 
+		\end{itemize}
+		
+		\section{Liquid}
+		\begin{itemize}
+			\item \textbf{Good}: High specific impulses, reignitable, variable mass flow
+			\item \textbf{Bad}: Movement of fuel in tanks, leakage, complex turbo pumps, big temperature range, zero-g fuel supply 
+		\end{itemize}
+		
+		\section{Gel}
+		Gel propellants are mixtures containing at least two phases. A base fluid and a gelator to solidify the base fluid.
+		\vspace{7pt}
+		\begin{itemize}
+			\item \textbf{Good}: easy to store like solids, can handle metal additives without sedimentation, in use similar to liquid propellants due to shear-thinning behaviour
+			\item \textbf{Bad}: lower density and thrustdensity, lower specific impulses, higher operating pressures to transport the gel are necessary
+		\end{itemize}
+		\vspace{7pt}
+		
+		\section{Hybrid}
+		Hybrid propellants are diffusion limited, which means that the regression rate is not pressure dependent.
+		\vspace{7pt}
+		\begin{itemize}
+			\item \textbf{Good}: Inherently safe because no oxidizer contained in the fuel, can be throttled and reignited
+			\item \textbf{Bad}: low regression rates, oxidizer-fuel shift in some fuels during operation, not much experience
+		\end{itemize}
+		\vspace{7pt}
+		It has been shown that Paraffin cores have a higher regression rate (3-5 times) than the classical HTPB cores.
+		
+		\section{Green Propellants}
+		\begin{itemize}
+			\item \textbf{Good}: Lower toxicity, less environmental hazards, lower costs
+			\item \textbf{Bad}: medium specific impulses, not much experience
+		\end{itemize}
+		
+		\section{Editorial}
+		Created by Christian Molli\`ere.\\
+		Last updated \today.\\
+		Feel free to share and edit!
+		
+		
+	\end{multicols}
 \end{document}
